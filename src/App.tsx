@@ -4,7 +4,7 @@ import { type JSX, useEffect, useState } from "react";
 import {Rocket, ShoppingBag} from "lucide-react";
 import { Separator } from "@radix-ui/react-separator";
 import { motion, AnimatePresence } from "framer-motion";
-
+import WebApp from "@twa-dev/sdk";
 type Category = "casino" | "markets" | "utils";
 
 const items: Record<
@@ -142,6 +142,8 @@ function App() {
   ];
 
   useEffect(() => {
+    WebApp.disableVerticalSwipes();
+
     const handleScroll = () => {
       if (window.scrollY > 100) {
         setShowHeader(true);
