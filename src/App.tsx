@@ -144,6 +144,11 @@ function App() {
   useEffect(() => {
     WebApp.disableVerticalSwipes();
 
+    const userAgent = navigator.userAgent;
+    if (/Telegram-Android/i.test(userAgent) || /iPhone|iPad/i.test(userAgent)) {
+      WebApp.requestFullscreen();
+    }
+
     const handleScroll = () => {
       if (window.scrollY > 100) {
         setShowHeader(true);
