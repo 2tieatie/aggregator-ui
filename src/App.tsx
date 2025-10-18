@@ -160,7 +160,7 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col w-screen bg-gradient-to-b">
       <div
-        className={`sticky top-0 left-0 w-screen h-24 px-4 flex justify-center z-50 items-end pb-2
+        className={`sticky top-0 left-0 w-screen h-24 px-4 flex justify-center z-50 items-end pb-2.5
                    transition-all duration-300
                    ${isScrolled ? "bg-white/90 backdrop-blur-md border-b-[1px] shadow-sm" : "bg-white/75 backdrop-blur-sm border-b-[1px]"}`}
       >
